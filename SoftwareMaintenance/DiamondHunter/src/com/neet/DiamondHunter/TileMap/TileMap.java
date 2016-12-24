@@ -17,37 +17,37 @@ import com.neet.DiamondHunter.Main.GamePanel;
 public class TileMap {
 	
 	// position
-	private int x;
-	private int y;
-	private int xdest;
-	private int ydest;
-	private int speed;
-	private boolean moving;
+	public int x;
+	public int y;
+	public int xdest;
+	public int ydest;
+	public int speed;
+	public boolean moving;
 	
 	// bounds
-	private int xmin;
-	private int ymin;
-	private int xmax;
-	private int ymax;
+	public int xmin;
+	public int ymin;
+	public int xmax;
+	public int ymax;
 	
 	// map
-	private int[][] map;
-	private int tileSize;
-	private int numRows;
-	private int numCols;
-	private int width;
-	private int height;
+	public int[][] map;
+	public int tileSize;
+	public int numRows;
+	public int numCols;
+	public int width;
+	public int height;
 	
 	// tileset
-	private BufferedImage tileset;
-	private int numTilesAcross;
-	private Tile[][] tiles;
+	public BufferedImage tileset;
+	public int numTilesAcross;
+	public Tile[][] tiles;
 	
 	// drawing
-	private int rowOffset;
-	private int colOffset;
-	private int numRowsToDraw;
-	private int numColsToDraw;
+	public int rowOffset;
+	public int colOffset;
+	public int numRowsToDraw;
+	public int numColsToDraw;
 	
 	public TileMap(int tileSize) {
 		this.tileSize = tileSize;
@@ -122,6 +122,13 @@ public class TileMap {
 				}
 			}
 			
+			//for(int col = 0; col < numCols; col++) {
+			//	for(int row = 0; row < numRows; row++) {
+			//	  String line = br.readLine();
+			//	  String[] tokens = line.split(delims);
+			//	  map[row][col] = Integer.parseInt(tokens[col]);
+			//	}
+			//}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -151,6 +158,7 @@ public class TileMap {
 		map[row][col] = index;
 	}
 	public void replace(int i1, int i2) {
+		// replaces something
 		for(int row = 0; row < numRows; row++) {
 			for(int col = 0; col < numCols; col++) {
 				if(map[row][col] == i1) map[row][col] = i2;
@@ -175,39 +183,14 @@ public class TileMap {
 	}
 	
 	public void update() {
-		if(x < xdest) {
-			x += speed;
-			if(x > xdest) {
-				x = xdest;
-			}
-		}
-		if(x > xdest) {
-			x -= speed;
-			if(x < xdest) {
-				x = xdest;
-			}
-		}
-		if(y < ydest) {
-			y += speed;
-			if(y > ydest) {
-				y = ydest;
-			}
-		}
-		if(y > ydest) {
-			y -= speed;
-			if(y < ydest) {
-				y = ydest;
-			}
-		}
+		if(x < xdest) { x += speed; if(x > xdest) { x = xdest; } };	if(x > xdest) { x -= speed; if(x < xdest) { x = xdest; } }
+		if(y < ydest) {	y += speed;	if(y > ydest) {	y = ydest; } };	if(y > ydest) {	y -= speed;	if(y < ydest) {	y = ydest; } }
 		
 		fixBounds();
 		
-		colOffset = -this.x / tileSize;
-		rowOffset = -this.y / tileSize;
+		colOffset = -this.x / tileSize; rowOffset = -this.y / tileSize;
 		
-		if(x != xdest || y != ydest) moving = true;
-		else moving = false;
-		
+		if(x != xdest || y != ydest) moving = true;	else moving = false;
 	}
 	
 	public void draw(Graphics2D g) {
@@ -239,6 +222,21 @@ public class TileMap {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
