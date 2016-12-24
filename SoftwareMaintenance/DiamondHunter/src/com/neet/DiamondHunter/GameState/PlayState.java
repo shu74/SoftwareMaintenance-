@@ -313,16 +313,16 @@ public class PlayState extends GameState {
 	}
 	
 	public void handleInput() {
-		if(Keys.isPressed(Keys.ESCAPE)) {
+		if(Keys.isPressed(Keys.K7)) {
 			JukeBox.stop("music1");
 			gsm.setPaused(true);
 		}
 		if(blockInput) return;
-		if(Keys.isDown(Keys.LEFT)) player.setLeft();
-		if(Keys.isDown(Keys.RIGHT)) player.setRight();
-		if(Keys.isDown(Keys.UP)) player.setUp();
-		if(Keys.isDown(Keys.DOWN)) player.setDown();
-		if(Keys.isPressed(Keys.SPACE)) player.setAction();
+		if(Keys.isDown(Keys.K2)) player.setLeft();
+		if(Keys.isDown(Keys.K4)) player.setRight();
+		if(Keys.isDown(Keys.K1)) player.setUp();
+		if(Keys.isDown(Keys.K3)) player.setDown();
+		if(Keys.isPressed(Keys.K5)) player.setAction();
 	}
 	
 	//===============================================
@@ -384,3 +384,4 @@ public class PlayState extends GameState {
 	}
 	
 }
+
