@@ -49,15 +49,15 @@ public class MenuState extends GameState {
 	}
 	
 	public void handleInput() {
-		if(Keys.isPressed(Keys.DOWN) && currentOption < options.length - 1) {
+		if(Keys.isPressed(Keys.K3) && currentOption < options.length - 1) {
 			JukeBox.play("menuoption");
 			currentOption++;
 		}
-		if(Keys.isPressed(Keys.UP) && currentOption > 0) {
+		if(Keys.isPressed(Keys.K1) && currentOption > 0) {
 			JukeBox.play("menuoption");
 			currentOption--;
 		}
-		if(Keys.isPressed(Keys.ENTER)) {
+		if(Keys.isPressed(Keys.K6)) {
 			JukeBox.play("collect");
 			selectOption();
 		}
@@ -73,3 +73,4 @@ public class MenuState extends GameState {
 	}
 	
 }
+
