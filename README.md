@@ -5,13 +5,14 @@ Maintaining and evolving existing software
 Module Convenor: Behrang Parhizkar (Hani)
 
 Team Members:
-Ashfaaq Damree 024000
 
-Jaslin Sandhu 023368
+Ashfaaq Damree 024000 | Username: shu74
 
-Tavish Bharvani 024146
+Jaslin Sandhu 023368 | Username: JaslinSandhu
 
-Javed Khan 023746
+Tavish Bharvani 024146 | Username: khcy5tpk
+
+Javed Khan 023746 | Username: javed1996
 
 
 
