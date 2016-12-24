@@ -12,7 +12,7 @@ Jaslin Sandhu 023368 | Username: JaslinSandhu
 
 Tavish Bharvani 024146 | Username: khcy5tpk
 
-Javed Khan 023746 | Username: javed1996
+Javed Khan 023746 | Username: Javed1996
 
 
 
